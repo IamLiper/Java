@@ -5,7 +5,7 @@ public class Main {
 
         Pessoa pessoa = new Pessoa("Anne", 26, "anne@gmail.com");
 
-        pessoa.setNome("Felipe");
+        pessoa.setNome("Lipe");
 
         System.out.println("Nome: " + pessoa.getNome());
         System.out.println("Idade: " + pessoa.getIdade());
