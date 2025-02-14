@@ -38,7 +38,5 @@ public class Livro {
     }
     public void setPreco(double preco) {
         this.preco = preco;
-    }
-
-    
+    }  
 }
