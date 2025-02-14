@@ -1,10 +1,10 @@
-package exercicio;
+package exercicio01;
 
 import java.util.Scanner;
 
-import exercicio.models.Livro;
+import exercicio01.models.Livro;
 
-public class Main {
+public class MainLivro {
     public static void main(String[] args) {
         Scanner ler = new Scanner(System.in);
 
