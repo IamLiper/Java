@@ -8,20 +8,20 @@ public class MainPets {
     public static void main(String[] args) {
         Scanner ler = new Scanner(System.in);
 
-        System.out.println("Digite o titulo do livro: ");
-        String nomeDoPet = ler.nextLine();
-        System.out.println("Digite o nome do autor do livro: ");
+        System.out.println("Digite o nome do pet: ");
+        String nomeDoPet = ler.next();
+        System.out.println("Digite a idade do pet: ");
         int idadeDoPet = ler.nextInt();
-        System.out.println("Digite o número de páginas do livro: ");
-        String racaDoPet = ler.nextLine();
-        System.out.println("Digite o preço do livro: ");
-        String porteDoPet = ler.nextLine();
-        System.out.println("Digite o preço do livro: ");
-        String alimetacaoDoPet = ler.nextLine();
+        System.out.println("Digite a raça do pet: ");
+        String racaDoPet = ler.next();
+        System.out.println("Digite o porte do pet: ");
+        String porteDoPet = ler.next();
+        System.out.println("Digite a alimentação do pet: ");
+        String alimetacaoDoPet = ler.next();
 
         Pets pet1 = new Pets(nomeDoPet, idadeDoPet, racaDoPet, porteDoPet, alimetacaoDoPet);
 
-        System.out.println("Nome do pet: " + pet1.getNome());
+        System.out.println("\nNome do pet: " + pet1.getNome());
         System.out.println("Idade do pet: " + pet1.getIdade());
         System.out.println("Raça do pet: " + pet1.getRaca());
         System.out.println("Porte do pet: " + pet1.getPorte());
@@ -29,24 +29,24 @@ public class MainPets {
         
         // Pet 2
         
-        // System.out.println("Digite o titulo do livro: ");
-        // nomeDoPet = ler.nextLine();
-        // System.out.println("Digite o nome do autor do livro: ");
-        // idadeDoPet = ler.nextInt();
-        // System.out.println("Digite o número de páginas do livro: ");
-        //  racaDoPet = ler.nextLine();
-        // System.out.println("Digite o preço do livro: ");
-        // porteDoPet = ler.nextLine();
-        // System.out.println("Digite o preço do livro: ");
-        // alimetacaoDoPet = ler.nextLine();
+        System.out.println("\nDigite o nome do pet: ");
+        nomeDoPet = ler.next();
+        System.out.println("Digite a idade do pet: ");
+        idadeDoPet = ler.nextInt();
+        System.out.println("Digite a raça do pet: ");
+        racaDoPet = ler.next();
+        System.out.println("Digite o porte do pet: ");
+        porteDoPet = ler.next();
+        System.out.println("Digite a alimentação do pet: ");
+        alimetacaoDoPet = ler.next();
 
-        // Pets pet2 = new Pets(nomeDoPet, idadeDoPet, racaDoPet, porteDoPet, alimetacaoDoPet);
+        Pets pet2 = new Pets(nomeDoPet, idadeDoPet, racaDoPet, porteDoPet, alimetacaoDoPet);
 
-        // System.out.println("Nome do pet: " + pet2.getNome());
-        // System.out.println("Idade do pet: " + pet2.getIdade());
-        // System.out.println("Raça do pet: " + pet2.getRaca());
-        // System.out.println("Porte do pet: " + pet2.getPorte());
-        // System.out.println("Alimentação do pet: " + pet2.getAlimentacao());
+        System.out.println("\nNome do pet: " + pet2.getNome());
+        System.out.println("Idade do pet: " + pet2.getIdade());
+        System.out.println("Raça do pet: " + pet2.getRaca());
+        System.out.println("Porte do pet: " + pet2.getPorte());
+        System.out.println("Alimentação do pet: " + pet2.getAlimentacao());
 
         ler.close();
     }
