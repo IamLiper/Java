@@ -15,12 +15,19 @@ public class MainVeiculoCliente {
         String corDoCarro = ler.next();
         System.out.println("Digite o número de passageiros do veículo: ");
         int nmrDePassageiros = ler.nextInt();
-        System.out.println("Digite a capacidade do tanque do veículo: ");
+        System.out.println("Digite a quantidade do tanque de gasolina do veículo: ");
         double cpcdDeTanque = ler.nextDouble();
         System.out.println("Digite a velocidade máxima do veículo: ");
         int vlcddMaxima = ler.nextInt();
-        System.out.println("Digite o consumo medio do veículo: ");
+        System.out.println("Digite a porcentagem de consumo medio do veículo: ");
         double csmMedio = ler.nextDouble();
+        
+        double pctgDeConsumo = csmMedio;
+        double qtddDotanque = cpcdDeTanque;
+
+        double consumoTotal = qtddDotanque - (qtddDotanque * (pctgDeConsumo/100));
+
+
 
         Veiculo veiculo = new Veiculo(placaDoCarro, corDoCarro, nmrDePassageiros, cpcdDeTanque, vlcddMaxima, csmMedio);
 
@@ -44,6 +51,7 @@ public class MainVeiculoCliente {
         System.out.println("Capacidade de Tanque: " + veiculo.getCapacidadeDeTanque());
         System.out.println("Velocidade máxima: " + veiculo.getVelocidadeMaxima());
         System.out.println("Consuom medio: " + veiculo.getConsumoMedio());
+        System.out.println("Consumo total de gasolina: " + consumoTotal);
 
         System.out.println("\nNome do Cliente: " + cliente.getNome());
         System.out.println("Idade do cliente: " + cliente.getIdade());
