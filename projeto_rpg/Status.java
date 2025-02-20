@@ -5,7 +5,7 @@ public class Status {
     private int agilidade = 5;
     private int inteligencia = 5;
     private int defesaMagic = 5;
-    private double exp = 0;
+    private int exp = 0;
     private double gold = 500;
 
     // Construtor framework
@@ -14,7 +14,7 @@ public class Status {
 
 
     //Contrutor
-    public Status(int forca, int defesa, int agilidade, int inteligencia, int defesaMagic, double exp, double gold) {
+    public Status(int forca, int defesa, int agilidade, int inteligencia, int defesaMagic, int exp, double gold) {
         this.forca = forca;
         this.defesa = defesa;
         this.agilidade = agilidade;
@@ -75,12 +75,12 @@ public class Status {
     }
 
 
-    public double getExp() {
+    public int getExp() {
         return exp;
     }
 
 
-    public void setExp(double exp) {
+    public void setExp(int exp) {
         this.exp = exp;
     }
 
@@ -97,7 +97,6 @@ public class Status {
     // toString
     @Override
     public String toString() {
-        return "Status [forca=" + forca + ", defesa=" + defesa + ", agilidade=" + agilidade + ", inteligencia="
-                + inteligencia + ", defesaMagic=" + defesaMagic + ", exp=" + exp + ", gold=" + gold + "]";
+        return "Status: \nForça: " + forca + "\nDefesa: " + defesa + "\nAgilidade: " + agilidade + "\nInteligencia: " + inteligencia + "\nDefesa Magic: " + defesaMagic + "\nExp: " + exp + "\nGold: " + gold;
     }
-} 
+}

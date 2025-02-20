@@ -1,6 +1,6 @@
 public enum Classe {
-    Warrior,
-    Mage,
-    Archer,
-    Assassin;
+    WARRIOR,
+    MAGE,
+    ARCHER,
+    ASSASSIN;
 }
