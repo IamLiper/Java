@@ -2,9 +2,6 @@ package exercicio03;
 
 import java.util.Scanner;
 
-import exercicio03.models.Livro;
-import exercicio03.models.Veiculo;
-
 public class MainVeiculoLivro {
     public static void main(String[] args) {
         Scanner ler = new Scanner(System.in);

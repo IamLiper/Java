@@ -1,4 +1,4 @@
-package exercicio03.models;
+package exercicio03;
 
 public class Livro {
     // Atributos

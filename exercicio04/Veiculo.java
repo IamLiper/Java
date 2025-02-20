@@ -1,4 +1,4 @@
-package exercicio04.models;
+package exercicio04;
 
 public class Veiculo {
     // Atributos
@@ -10,7 +10,7 @@ public class Veiculo {
     private double consumoMedio;
 
     // Contrutor
-    public Veiculo(String placa, String cor, int numeroDePaginas, double capacidadeDeTanque, int velocidadeMaxima,
+    public Veiculo(String placa, String cor, int numeroDePassageiros, double capacidadeDeTanque, int velocidadeMaxima,
             double consumoMedio) {
         this.placa = placa;
         this.cor = cor;
@@ -19,7 +19,7 @@ public class Veiculo {
         this.velocidadeMaxima = velocidadeMaxima;
         this.consumoMedio = consumoMedio;
     }
-
+    
     // Getters and Setters
     public String getPlaca() {
         return placa;

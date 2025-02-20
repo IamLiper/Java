@@ -2,9 +2,6 @@ package exercicio04;
 
 import java.util.Scanner;
 
-import exercicio04.models.Veiculo;
-import exercicio04.models.Cliente;
-
 public class MainVeiculoCliente {
     public static void main(String[] args) {
         Scanner ler = new Scanner(System.in);

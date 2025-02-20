@@ -1,4 +1,4 @@
-package exercicio02.models;
+package exercicio02;
 
 public class Pets {
     // Atributos

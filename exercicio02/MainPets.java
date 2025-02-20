@@ -2,8 +2,6 @@ package exercicio02;
 
 import java.util.Scanner;
 
-import exercicio02.models.Pets;
-
 public class MainPets {
     public static void main(String[] args) {
         Scanner ler = new Scanner(System.in);

@@ -1,4 +1,4 @@
-package exercicio04.models;
+package exercicio04;
 
 public class Cliente {
     // Atributos
