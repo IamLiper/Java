@@ -4,7 +4,6 @@ public class Processador extends Classic {
         super(marca, modelo, frequencia);
     }
 
-    @Override
     public String toString() {
         return "Processador " + super.toStringMarcaModeloFrequencia();
     }
