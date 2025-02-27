@@ -4,7 +4,6 @@ public class Memoria extends Classic {
         super(marca, modelo, frequencia, capacidadeDeArmazenamento);
     }
 
-    @Override
     public String toString() {
         return "Memoria: " + super.toStringTodos();
     }  
