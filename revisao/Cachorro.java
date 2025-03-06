@@ -1,14 +1,19 @@
-package exercicio13;
-
 public class Cachorro implements Animal{
 
     @Override
     public String emitirSom() {
-        return "Auau!";
+        return "Auau";
     }
 
     @Override
     public String comer() {
-        return "Ração de Cachorro";
+        return"Ração";
     }
+
+    @Override
+    public String acao() {
+        return "Correr";
+    }
+
+    
 }
