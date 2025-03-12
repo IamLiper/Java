@@ -4,13 +4,13 @@ public enum Bonificacao {
     GERENTE(1.3),
     DIRETOR(1.4);
 
-    private double bonificacao;
+    private double valor;
 
     Bonificacao(double bonificacao) {
-        this.bonificacao = bonificacao;
+        this.valor = bonificacao;
     }
 
-    public double getBonificacao() {
-        return bonificacao;
+    public double getValor() {
+        return valor;
     }
 }

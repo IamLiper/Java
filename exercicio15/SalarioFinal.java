@@ -1,5 +1,5 @@
 package exercicio15;
 
 public interface SalarioFinal {
-    public double obterSalarioFinal();
+    public abstract double obterSalarioFinal();
 }

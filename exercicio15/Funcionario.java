@@ -17,43 +17,29 @@ public abstract class Funcionario implements SalarioFinal{
         return nome;
     }
 
-
-
     public void setNome(String nome) {
         this.nome = nome;
     }
-
-
 
     public String getCpf() {
         return cpf;
     }
 
-
-
     public void setCpf(String cpf) {
         this.cpf = cpf;
     }
-
-
 
     public String getDataNascimento() {
         return dataNascimento;
     }
 
-
-
     public void setDataNascimento(String dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
 
-
-
     public double getSalarioBase() {
         return salarioBase;
     }
-
-
 
     public void setSalarioBase(double salarioBase) {
         this.salarioBase = salarioBase;
@@ -61,6 +47,6 @@ public abstract class Funcionario implements SalarioFinal{
 
     @Override
     public String toString() {
-        return "Funcionario [salarioBase=" + salarioBase + "]";
+        return "Funcionario{" + "nome=" + nome + ", cpf=" + cpf + ", dataNascimento=" + dataNascimento + ", salarioBase=" + salarioBase + '}';
     }
 }
