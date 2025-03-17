@@ -1,13 +1,13 @@
-package exercicio11;
-
 public class MainProdutos {
     public static void main(String[] args) {
-        Camisa camisa1 = new Camisa("Nike", "Preto", "M", 150);
-        Calca calca1 = new Calca("Adidas", "Jeans", "48", 120);
-        Sapato sapato1 = new Sapato("Polo", "Preto", "39-40", 99.99);
+        Processador processador1 = new Processador("AMD", "Ryzen", 2.4);
+        Memoria memoria1 = new Memoria("Cannabis", "FatalModel", 2.5, 520);
+        Placa_Mae placa_Mae1 = new Placa_Mae("ASRock", "micro-ATX", "ATX");
+        Dispositivo_De_Armazenamento dispositivo_De_Armazenamento1 = new Dispositivo_De_Armazenamento("Arceus", 520, "SSD", "Energia");
 
-        System.out.println(camisa1.toString());
-        System.out.println(calca1.toString());
-        System.out.println(sapato1.toString());
+        System.out.println(processador1.toString());
+        System.out.println(memoria1.toString());
+        System.out.println(placa_Mae1.toString());
+        System.out.println(dispositivo_De_Armazenamento1.toString());
     }
 }

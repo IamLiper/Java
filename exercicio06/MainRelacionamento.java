@@ -1,4 +1,4 @@
-package exercicio05;
+package exercicio06;
 
 public class MainRelacionamento {
     public static void main(String[] args) {

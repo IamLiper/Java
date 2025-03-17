@@ -1,4 +1,4 @@
-package exercicio07;
+package exercicio08;
 
 public class Funcionario {
     private String codDoFunc;

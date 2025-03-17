@@ -1,4 +1,4 @@
-package exercicio11;
+package exercicio12;
 
 public class Calca extends Produto{
 

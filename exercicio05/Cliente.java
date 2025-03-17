@@ -3,43 +3,49 @@ package exercicio05;
 public class Cliente {
     // Atributos
     private String nome;
-    private String idade;
-    private Endereco endereco;
+    private int idade;
+    private String cpf;
+    private String endereco;
+    private int telefone;
 
-    // Contrutor framework
-    public Cliente() {
-    }
-
-    // Contrutor
-    public Cliente(String nome, String idade, Endereco endereco) {
+    // Construtor
+    public Cliente(String nome, int idade, String cpf, String endereco, int telefone) {
         this.nome = nome;
         this.idade = idade;
+        this.cpf = cpf;
         this.endereco = endereco;
+        this.telefone = telefone;
     }
 
-    // Getters and Setters
+    // Getter and Setters
     public String getNome() {
         return nome;
     }
     public void setNome(String nome) {
         this.nome = nome;
     }
-    public String getIdade() {
+    public int getIdade() {
         return idade;
     }
-    public void setIdade(String idade) {
+    public void setIdade(int idade) {
         this.idade = idade;
     }
-    public Endereco getEndereco() {
+    public String getCpf() {
+        return cpf;
+    }
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+    public String getEndereco() {
         return endereco;
     }
-    public void setEndereco(Endereco endereco) {
+    public void setEndereco(String endereco) {
         this.endereco = endereco;
     }
-
-    // toString
-    @Override
-    public String toString() {
-        return "Cliente [nome = " + nome + ", idade = " + idade + ", endereco = " + endereco + "]";
+    public int getTelefone() {
+        return telefone;
+    }
+    public void setTelefone(int telefone) {
+        this.telefone = telefone;
     }
 }

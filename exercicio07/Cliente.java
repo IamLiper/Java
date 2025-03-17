@@ -1,20 +1,19 @@
-package exercicio06;
+package exercicio07;
 
 public class Cliente {
-    // Atributos
     private String nome;
     private String idade;
-    private Endereco endereco;
+    private Pet pet;
 
-    // Contrutor framework
+    // Construtor framework
     public Cliente() {
     }
 
-    // Contrutor
-    public Cliente(String nome, String idade, Endereco endereco) {
+    // Construtor
+    public Cliente(String nome, String idade, Pet pet) {
         this.nome = nome;
         this.idade = idade;
-        this.endereco = endereco;
+        this.pet = pet;
     }
 
     // Getters and Setters
@@ -30,16 +29,16 @@ public class Cliente {
     public void setIdade(String idade) {
         this.idade = idade;
     }
-    public Endereco getEndereco() {
-        return endereco;
+    public Pet getPet() {
+        return pet;
     }
-    public void setEndereco(Endereco endereco) {
-        this.endereco = endereco;
+    public void setPet(Pet pet) {
+        this.pet = pet;
     }
 
     // toString
     @Override
     public String toString() {
-        return "Cliente [nome = " + nome + ", idade = " + idade + ", endereco = " + endereco + "]";
+        return "Cliente [nome: " + nome + ", idade: " + idade + ", pet: " + pet + "]";
     }
 }

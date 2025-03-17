@@ -1,4 +1,4 @@
-package exercicio06;
+package exercicio07;
 
 public class MainClientePet {
     public static void main(String[] args) {

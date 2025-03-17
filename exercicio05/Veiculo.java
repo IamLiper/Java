@@ -1,4 +1,4 @@
-package exercicio03;
+package exercicio05;
 
 public class Veiculo {
     // Atributos
@@ -19,7 +19,7 @@ public class Veiculo {
         this.velocidadeMaxima = velocidadeMaxima;
         this.consumoMedio = consumoMedio;
     }
-
+    
     // Getters and Setters
     public String getPlaca() {
         return placa;

@@ -1,8 +1,8 @@
-package exercicio01;
+package exercicio02;
 
 import java.util.Scanner;
 
-import exercicio01.models.Livro;
+import exercicio02.models.Livro;
 
 public class MainLivro {
     public static void main(String[] args) {
