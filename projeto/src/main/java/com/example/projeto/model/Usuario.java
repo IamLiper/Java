@@ -4,6 +4,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 
 @Entity
 public class Usuario {
@@ -11,10 +13,15 @@ public class Usuario {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotBlank(message = "None é obrigatório")
     private String nome;
+
+    @NotBlank(message = "E-mail é obrigatório")
     private String email;
+
+    @NotBlank(message = "Senha é obrigatório")
+    @Size(min = 3, message = "A senha deve ter no mínimo 3 caracteres")
     private String senha;
-    private String telefone;
 
     public Usuario() {
     }
@@ -24,7 +31,6 @@ public class Usuario {
         this.nome = nome;
         this.email = email;
         this.senha = senha;
-        this.telefone = telefone;
     }
 
     public Long getId() {
@@ -59,14 +65,6 @@ public class Usuario {
         this.senha = senha;
     }
 
-    public String getTelefone() {
-        return telefone;
-    }
-
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
-    }
-
     @Override
     public String toString() {
         return "Usuario{" +
@@ -74,7 +72,6 @@ public class Usuario {
                 ", nome='" + nome + '\'' +
                 ", email='" + email + '\'' +
                 ", senha='" + senha + '\'' +
-                ", telefone='" + telefone + '\'' +
                 '}';
     }
 }

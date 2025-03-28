@@ -1,7 +1,8 @@
 package com.example.projeto.controller;
 
 import com.example.projeto.model.Usuario;
-import com.example.projeto.repository.UsuarioRepository;
+import com.example.projeto.service.UsuarioService;
+import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -12,34 +13,32 @@ import java.util.List;
 @RequestMapping("/usuario")
 public class UsuarioController {
 
-    private UsuarioRepository usuarioRepository;
+    private UsuarioService usuarioService;
 
-    public UsuarioController(UsuarioRepository usuarioRepository) {
-        this.usuarioRepository = usuarioRepository;
+    public UsuarioController(UsuarioService usuarioService) {
+        this.usuarioService = usuarioService;
     }
 
     @GetMapping
-    public List<Usuario> listartodos() {
-        return usuarioRepository.findAll();
+    public List<Usuario> listarTodos() {
+        return usuarioService.listarUsuarios();
     }
 
     @PostMapping
-    ResponseEntity<Usuario> salvar(@RequestBody Usuario usuario) {
-        usuarioRepository.save(usuario);
+    public ResponseEntity<Usuario> salvar(@RequestBody Usuario usuario) {
+        usuarioService.salvar(usuario);
         return ResponseEntity.status(HttpStatus.CREATED).body(usuario);
     }
 
     @PutMapping
-    ResponseEntity<Usuario> atualizar(@RequestBody Usuario usuario) {
-        if (usuarioRepository.existsById(usuario.getId())){
-            usuarioRepository.save(usuario);
-        }
-        return ResponseEntity.ok().build();
+    public ResponseEntity<Usuario> atalizar(@Valid @RequestBody Usuario usuario) {
+        usuarioService.atualizar(usuario);
+        return ResponseEntity.ok().body(usuario);
     }
 
-    @DeleteMapping("/{id}")
-    ResponseEntity<Void> excluir(@PathVariable Long id){
-        usuarioRepository.deleteById(id);
+    @DeleteMapping("/{email}")
+    public ResponseEntity<Void> excluir(@PathVariable String email) {
+        usuarioService.excluir(email);
         return ResponseEntity.noContent().build();
     }
 }
