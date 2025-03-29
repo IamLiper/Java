@@ -1,6 +1,6 @@
 package com.example.projeto.controller;
 
-import com.example.projeto.model.Usuario;
+import com.example.projeto.model.Usuario.Usuario;
 import com.example.projeto.service.UsuarioService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
@@ -25,20 +25,22 @@ public class UsuarioController {
     }
 
     @PostMapping
-    public ResponseEntity<Usuario> salvar(@RequestBody Usuario usuario) {
+    public ResponseEntity<String> salvar(@RequestBody Usuario usuario) {
         usuarioService.salvar(usuario);
-        return ResponseEntity.status(HttpStatus.CREATED).body(usuario);
+        String mensagem = "Usuario " + usuario.getNome() + " cadastrado com sucesso!";
+        return ResponseEntity.status(HttpStatus.CREATED).body(mensagem);
     }
 
     @PutMapping
-    public ResponseEntity<Usuario> atalizar(@Valid @RequestBody Usuario usuario) {
+    public ResponseEntity<String> atualizar(@Valid @RequestBody Usuario usuario) {
         usuarioService.atualizar(usuario);
-        return ResponseEntity.ok().body(usuario);
+        String mensagem = "Usuario atualizado com sucesso!";
+        return ResponseEntity.ok().body(mensagem);
     }
 
     @DeleteMapping("/{email}")
-    public ResponseEntity<Void> excluir(@PathVariable String email) {
+    public ResponseEntity<String> excluir(@PathVariable String email) {
         usuarioService.excluir(email);
-        return ResponseEntity.noContent().build();
+        return ResponseEntity.ok().body("Usuario excluido com sucesso!");
     }
 }

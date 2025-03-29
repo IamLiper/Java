@@ -1,7 +1,8 @@
 package com.example.projeto.service;
 
-import com.example.projeto.model.Usuario;
-import com.example.projeto.repository.UsuarioRepository;
+iimport com.example.projeto.model.Funcionario.Funcionario;
+import com.example.projeto.model.Funcionario.Funcionario;
+import com.example.projeto.repository.FuncionarioRepository;
 import jakarta.validation.Valid;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.annotation.Validated;
@@ -10,39 +11,50 @@ import java.util.List;
 
 @Service
 @Validated
-public class UsuarioService {
-    private UsuarioRepository usuarioRepository;
+public class FuncionarioService {
+    private FuncionarioRepository funcionarioRepository;
 
-    public UsuarioService(UsuarioRepository usuarioRepository) {
-        this.usuarioRepository = usuarioRepository;
+    public FuncionarioService(FuncionarioRepository funcionarioRepository) {
+        this.funcionarioRepository = funcionarioRepository;
     }
 
-    public List<Usuario> listarUsuarios(){
-        return usuarioRepository.findAll();
+    public List<Funcionario> listarFuncionarios() {
+        return funcionarioRepository.findAll();
     }
 
-    public Usuario salvar(@Valid Usuario usuario) {
-        if (usuarioRepository.findByEmail(usuario.getEmail()).isPresent()) {
+    public Funcionario salvar(@Valid Funcionario funcionario) {
+        if (funcionarioRepository.findByEmail(funcionario.getEmail()).isPresent()) {
             throw new RuntimeException("E-mail já cadastrado");
         }
 
-        return usuarioRepository.save(usuario);
+        return funcionarioRepository.save(funcionario);
     }
 
     public void excluir(String email) {
-        Usuario usuario = usuarioRepository.findByEmail(email)
-                .orElseThrow(() -> new RuntimeException("Usuario não encontrado."));
-        usuarioRepository.deleteById(usuario.getId());
+        Funcionario funcionario = funcionarioRepository.findByEmail(email)
+                .orElseThrow(() -> new RuntimeException("Funcionario não encontrado."));
+
+        funcionarioRepository.deleteById(funcionario.getId());
     }
 
-    public Usuario atualizar(@Valid Usuario usuario) {
-        Usuario usuarioAtualiazar = usuarioRepository.findById(usuario.getId())
-                .orElseThrow(() -> new RuntimeException("Usuário não encontrado."));
+    public Funcionario atualizar(@Valid Funcionario funcionario) {
+        Funcionario funcionarioAtualizar = funcionarioRepository.findById(funcionario.getId())
+                .orElseThrow(() -> new RuntimeException("Funcionario não encontrado"));
 
-        usuarioAtualiazar.setNome(usuario.getNome());
-        usuarioAtualiazar.setEmail(usuario.getEmail());
-        usuarioAtualiazar.setSenha(usuario.getSenha());
+        funcionarioAtualizar.setNome(funcionario.getNome());
+        funcionarioAtualizar.setCpf(funcionario.getCpf());
+        funcionarioAtualizar.setRg(funcionario.getRg());
+        funcionarioAtualizar.setMatricula(funcionario.getMatricula());
+        funcionarioAtualizar.setDatanascimento(funcionario.getDatanascimento());
+        funcionarioAtualizar.setSexo(funcionario.getSexo());
+        funcionarioAtualizar.setSetor(funcionario.getSetor());
+        funcionarioAtualizar.setSalario(funcionario.getSalario());
+        funcionarioAtualizar.setTelefone(funcionario.getTelefone());
+        funcionarioAtualizar.setEmail(funcionario.getEmail());
+        funcionarioAtualizar.setEndereco(funcionario.getEndereco());
 
-        return usuarioRepository.save(usuarioAtualiazar);
+        return funcionarioRepository.save(funcionario);
     }
+}
+
 }
